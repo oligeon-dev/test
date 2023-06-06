@@ -12,6 +12,7 @@ export default defineConfig({
       short_name: 'bbbbbbbbbbbbbbbbbbbbbb',
 
     },
+    injectRegister: 'auto',
     registerType: 'autoUpdate'
   })
   ],
