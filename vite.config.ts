@@ -10,7 +10,7 @@ export default defineConfig({
       useCredentials: true,
       manifest: {
         name: "aaaaaaaaaaaaaaaaaaaa",
-        short_name: "bbbbbbbbbbbbbbbbbbbbbb",
+        short_name: "あいうえおあいうえおあいうえおあいうえお",
         icons: [
           {
             src: "test.png",
