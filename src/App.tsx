@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
-  const [version, setVersion] = useState("");
+  const [_, setVersion] = useState("");
   const userAgent = navigator.userAgent;
   console.log(userAgent);
 
@@ -33,7 +33,12 @@ function App() {
     }
     return null;
   };
-  return <div>{userAgent}</div>;
+  return (
+    <>
+      <div>{userAgent}</div>
+      <div>test</div>
+    </>
+  );
 }
 
 export default App;
