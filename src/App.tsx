@@ -33,7 +33,7 @@ function App() {
     }
     return null;
   };
-  return <div>{version}</div>;
+  return <div>{userAgent}</div>;
 }
 
 export default App;
