@@ -9,8 +9,9 @@ export default defineConfig({
     VitePWA({
       useCredentials: true,
       manifest: {
-        name: "aaaaaaaaaaaaaaaaaaaa",
-        short_name: "あいうえおあいうえおあいうえおあいうえお",
+        display: "standalone",
+        name: "モバイル",
+        short_name: "モバイル",
         icons: [
           {
             src: "test.png",
