@@ -21,6 +21,12 @@ export default defineConfig({
             type: "image/png",
             purpose: "maskable any",
           },
+          {
+            src: "test.png",
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "maskable any",
+          },
         ],
       },
       // injectRegister: "auto",
