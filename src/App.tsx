@@ -27,7 +27,7 @@ function App() {
   // });
   return (
     <>
-      <div>version: 1</div>
+      <div>version: 2</div>
       <ReloadPrompt />
     </>
   );
