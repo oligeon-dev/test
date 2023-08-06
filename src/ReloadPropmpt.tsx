@@ -1,6 +1,6 @@
 import { useRegisterSW } from "virtual:pwa-register/react";
 import "./ReloadPrompt.css";
-// import { useEffect } from "react";
+import { useEffect } from "react";
 export const ReloadPrompt = () => {
   //   const intervalMS = 2 * 60 * 1000;
   const {
@@ -21,9 +21,9 @@ export const ReloadPrompt = () => {
     },
   });
 
-  //   useEffect(() => {
-  //     setNeedRefresh(true);
-  //   }, []);
+  useEffect(() => {
+    setNeedRefresh(true);
+  }, []);
 
   const close = () => {
     setNeedRefresh(false);
