@@ -30,7 +30,8 @@ export default defineConfig({
         ],
       },
       // injectRegister: "auto",
-      registerType: "autoUpdate",
+      // registerType: "autoUpdate",
+      registerType: "prompt",
     }),
   ],
 });
