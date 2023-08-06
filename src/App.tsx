@@ -3,10 +3,20 @@ import "./App.css";
 import { ReloadPrompt } from "./ReloadPropmpt";
 // import { useRegisterSW } from "virtual:pwa-register/react";
 
-// const intervalMS = 60 * 1000;
-// Service Workerのファイルパスを指定
+// const intervalMS = 2 * 60 * 1000;
+
+// const updateServiceWorker = useRegisterSW({
+//   onRegistered(r) {
+//     console.log("check");
+//     r &&
+//       setInterval(() => {
+//         r.update();
+//       }, intervalMS);
+//   },
+// });
 
 function App() {
+  // updateServiceWorker;
   // const updateServiceWorker = useRegisterSW({
   //   onRegistered(r) {
   //     r &&

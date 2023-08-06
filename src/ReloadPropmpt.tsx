@@ -1,47 +1,51 @@
 import { useRegisterSW } from "virtual:pwa-register/react";
 import "./ReloadPrompt.css";
-
+// import { useEffect } from "react";
 export const ReloadPrompt = () => {
+  //   const intervalMS = 2 * 60 * 1000;
   const {
-    offlineReady: [offlineReady, setOfflineReady],
     needRefresh: [needRefresh, setNeedRefresh],
     updateServiceWorker,
   } = useRegisterSW({
     onRegistered(r) {
       // eslint-disable-next-line prefer-template
       console.log("SW Registered: " + r);
+
+      //   r &&
+      //     setInterval(() => {
+      //       r.update();
+      //     }, intervalMS);
     },
     onRegisterError(error) {
       console.log("SW registration error", error);
     },
   });
 
+  //   useEffect(() => {
+  //     setNeedRefresh(true);
+  //   }, []);
+
   const close = () => {
-    setOfflineReady(false);
     setNeedRefresh(false);
   };
 
   return (
     <div className="ReloadPrompt-container">
-      {(offlineReady || needRefresh) && (
+      {needRefresh && (
         <div className="ReloadPrompt-toast">
           <div className="ReloadPrompt-message">
-            {offlineReady ? (
-              <span>App ready to work offline</span>
-            ) : (
-              <span>
-                New content available, click on reload button to update.
-              </span>
-            )}
+            <span>
+              New content available, click on reload button to update.
+            </span>
           </div>
-          {needRefresh && (
-            <button
-              className="ReloadPrompt-toast-button"
-              onClick={() => updateServiceWorker(true)}
-            >
-              Reload
-            </button>
-          )}
+
+          <button
+            className="ReloadPrompt-toast-button"
+            onClick={() => updateServiceWorker(true)}
+          >
+            Reload
+          </button>
+
           <button className="ReloadPrompt-toast-button" onClick={() => close()}>
             Close
           </button>
