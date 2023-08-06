@@ -10,6 +10,7 @@ self.addEventListener("install", (event) => {
 self.addEventListener("activate", (event) => {
   // アクティベーション処理
   console.log("activate");
+  window.localStorage.setItem("test", "test");
 });
 
 self.addEventListener("fetch", (event) => {
