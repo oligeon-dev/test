@@ -1,35 +1,25 @@
 // import { useEffect, useState } from "react";
 import "./App.css";
+import { ReloadPrompt } from "./ReloadPropmpt";
+// import { useRegisterSW } from "virtual:pwa-register/react";
 
+// const intervalMS = 60 * 1000;
 // Service Workerのファイルパスを指定
-const serviceWorkerPath = "/sw.js";
-
-// 現在のService Workerバージョンを取得する関数
-async function getServiceWorkerVersion(): Promise<string | null> {
-  if ("serviceWorker" in navigator) {
-    const registration = await navigator.serviceWorker.getRegistration(
-      serviceWorkerPath
-    );
-    if (registration) {
-      const sw = registration.active;
-      if (sw) {
-        return sw.scriptURL.includes("?") ? sw.scriptURL.split("?")[1] : null;
-      }
-    }
-  }
-  return null;
-}
 
 function App() {
-  async function initApp() {
-    const currentVersion = await getServiceWorkerVersion();
-    console.log("現在のService Workerバージョン:", currentVersion);
-  }
+  // const updateServiceWorker = useRegisterSW({
+  //   onRegistered(r) {
+  //     r &&
+  //       setInterval(() => {
+  //         r.update();
+  //       }, intervalMS);
+  //   },
+  // });
+  return <ReloadPrompt />;
 
-  initApp();
   // const currentVersion = await getServiceWorkerVersion();
   // return <div>バージョン: {currentVersion}</div>;
-  return <div>test</div>;
+  // return <div>test</div>;
   // const [_, setVersion] = useState("");
   // const userAgent = navigator.userAgent;
   // console.log(userAgent);

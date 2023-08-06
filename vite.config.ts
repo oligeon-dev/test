@@ -29,9 +29,10 @@ export default defineConfig({
           },
         ],
       },
-      injectRegister: "script",
+      // injectRegister: "inline",
       registerType: "autoUpdate",
-      // registerType: "",
+      // // registerType: "",
+      // injectRegister: "script",
     }),
   ],
 });
