@@ -29,9 +29,9 @@ export default defineConfig({
           },
         ],
       },
-      // injectRegister: "auto",
-      // registerType: "autoUpdate",
-      registerType: "prompt",
+      injectRegister: "script",
+      registerType: "autoUpdate",
+      // registerType: "",
     }),
   ],
 });
