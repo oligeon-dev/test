@@ -25,7 +25,12 @@ function App() {
   //       }, intervalMS);
   //   },
   // });
-  return <ReloadPrompt />;
+  return (
+    <>
+      <div>version: 1</div>
+      <ReloadPrompt />
+    </>
+  );
 
   // const currentVersion = await getServiceWorkerVersion();
   // return <div>バージョン: {currentVersion}</div>;
