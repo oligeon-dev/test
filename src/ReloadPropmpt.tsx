@@ -2,7 +2,7 @@ import { useRegisterSW } from "virtual:pwa-register/react";
 import "./ReloadPrompt.css";
 import { useEffect } from "react";
 export const ReloadPrompt = () => {
-  //   const intervalMS = 2 * 60 * 1000;
+  const intervalMS = 2 * 60 * 1000;
   const {
     needRefresh: [needRefresh, setNeedRefresh],
     updateServiceWorker,
@@ -11,10 +11,11 @@ export const ReloadPrompt = () => {
       // eslint-disable-next-line prefer-template
       console.log("SW Registered: " + r);
 
-      //   r &&
-      //     setInterval(() => {
-      //       r.update();
-      //     }, intervalMS);
+      r &&
+        setInterval(() => {
+          r.update();
+          console.log("updated");
+        }, intervalMS);
     },
     onRegisterError(error) {
       console.log("SW registration error", error);
