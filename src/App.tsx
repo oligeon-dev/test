@@ -27,11 +27,11 @@ function App() {
   //       }, intervalMS);
   //   },
   // });
-  registerSW({
-    onNeedRefresh() {
-      console.log("on need refresh");
-    },
-  });
+  // registerSW({
+  //   onNeedRefresh() {
+  //     console.log("on need refresh");
+  //   },
+  // });
 
   return (
     <>
