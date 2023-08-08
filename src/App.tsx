@@ -1,6 +1,8 @@
 // import { useEffect, useState } from "react";
+import { registerSW } from "virtual:pwa-register";
 import "./App.css";
 import { ReloadPrompt } from "./ReloadPropmpt";
+// import { useEffect } from "react";
 // import { useRegisterSW } from "virtual:pwa-register/react";
 
 // const intervalMS = 2 * 60 * 1000;
@@ -25,6 +27,12 @@ function App() {
   //       }, intervalMS);
   //   },
   // });
+  registerSW({
+    onNeedRefresh() {
+      console.log("on need refresh");
+    },
+  });
+
   return (
     <>
       <div>{import.meta.env.VITE_APP_VERSION}</div>
