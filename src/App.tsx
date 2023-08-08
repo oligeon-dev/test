@@ -27,7 +27,7 @@ function App() {
   // });
   return (
     <>
-      <div>version: 6</div>
+      <div>{import.meta.env.VITE_APP_VERSION}</div>
       <ReloadPrompt />
     </>
   );
