@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./ReloadPrompt.css";
 
 import { useRegisterSW } from "virtual:pwa-register/react";
@@ -16,6 +17,10 @@ export function ReloadPrompt() {
       console.log("SW registration error", error);
     },
   });
+
+  useEffect(() => {
+    setNeedRefresh(true);
+  }, []);
 
   const close = () => {
     setOfflineReady(false);
