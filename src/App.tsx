@@ -1,5 +1,5 @@
 // import { useEffect, useState } from "react";
-import { registerSW } from "virtual:pwa-register";
+// import { registerSW } from "virtual/:pwa-register";
 import "./App.css";
 import { ReloadPrompt } from "./ReloadPropmpt";
 // import { useEffect } from "react";
