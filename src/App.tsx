@@ -2,6 +2,7 @@
 // import { registerSW } from "virtual/:pwa-register";
 import "./App.css";
 import ReloadPrompt from "./ReloadPrompt";
+import { Outlet } from "react-router-dom";
 // import { useEffect } from "react";
 // import { useRegisterSW } from "virtual:pwa-register/react";
 
@@ -35,7 +36,10 @@ function App() {
 
   return (
     <main className="App">
+      {/* <div>{import.meta.env.VITE_APP_VERSION}</div> */}
       <div>{import.meta.env.VITE_APP_VERSION}</div>
+      <h1 className="Home-title">PWA React!</h1>
+      <Outlet />
       <ReloadPrompt />
     </main>
   );
