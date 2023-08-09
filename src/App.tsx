@@ -1,7 +1,7 @@
 // import { useEffect, useState } from "react";
 // import { registerSW } from "virtual/:pwa-register";
 import "./App.css";
-import { ReloadPrompt } from "./ReloadPropmpt";
+import ReloadPrompt from "./ReloadPrompt";
 // import { useEffect } from "react";
 // import { useRegisterSW } from "virtual:pwa-register/react";
 
@@ -34,10 +34,10 @@ function App() {
   // });
 
   return (
-    <>
+    <main className="App">
       <div>{import.meta.env.VITE_APP_VERSION}</div>
       <ReloadPrompt />
-    </>
+    </main>
   );
 
   // const currentVersion = await getServiceWorkerVersion();
