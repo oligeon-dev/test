@@ -30,7 +30,7 @@ export default defineConfig({
         ],
       },
       // injectRegister: "inline",
-      // registerType: "autoUpdate",
+      registerType: "autoUpdate",
       // // registerType: "",
       // injectRegister: "script",
     }),
